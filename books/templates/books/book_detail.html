@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+
+{% block title %}جزئیات کتاب{{ book.title }}{% endblock title %}
+
+{% block content %}
+    <h1>{{ book.title }}</h1>
+    <h3>{{ book.author }}</h3>
+    <h5>{{ book.price }}</h5>
+    <p>{{ book.content }}</p>
+    <br>
+    <a class="btn btn-info" type="button" href="{% url 'book_list' %}">صفحه قبل</a>
+{% endblock %}
