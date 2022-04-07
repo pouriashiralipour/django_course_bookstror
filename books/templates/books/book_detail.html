@@ -8,5 +8,6 @@
     <h5>{{ book.price }}</h5>
     <p>{{ book.content }}</p>
     <br>
+    <a href="{% url 'book_update' book.id %}"><button class="btn btn-warning" type="button">ویرایش</button></a>
     <a class="btn btn-info" type="button" href="{% url 'book_list' %}">صفحه قبل</a>
 {% endblock %}

@@ -1,0 +1,16 @@
+{% extends '_base.html' %}
+
+
+{% block title %} ویرایش کتاب{{ book.title }}{% endblock title %}
+
+{% block content %}
+    <div class="container mt-3">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            <button class="btn btn-success" type="submit">ویرایش</button>
+        </form>
+    </div>
+{% endblock %}
