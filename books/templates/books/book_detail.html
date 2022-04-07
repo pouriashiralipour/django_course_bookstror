@@ -6,10 +6,12 @@
     <h1>{{ book.title }}</h1>
     <h3>{{ book.author }}</h3>
     <h5>{{ book.price }}</h5>
-    <p>{{ book.content }}</p>
+    <p>{{ book.content|linebreaks }}</p>
     <br>
     <a href="{% url 'book_update' book.id %}"><button class="btn btn-warning" type="button">ویرایش</button></a>
     <a href="{% url 'book_delete' book.id %}"><button class="btn btn-danger" type="button">حذف</button></a>
     <br>
     <a href="{% url 'book_list' %}">صفحه قبل</a>
+    <br>
+    <br>
 {% endblock %}
