@@ -6,5 +6,6 @@
     {% for book in books %}
         <h1><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h1>
     {% endfor %}
-    
+    <br>
+    <a class="text text-info" href="{% url 'book_create'%}">اضافه کردن کتاب جدید</a>
 {% endblock %}
